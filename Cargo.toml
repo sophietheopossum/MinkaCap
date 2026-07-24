@@ -1,0 +1,18 @@
+[package]
+name = "MinkaCap"
+version = "0.1.0"
+edition = "2021"
+description = "Per-window Wayland capture for MinkaDE: occlusion-free toplevel screenshots via ext-image-copy-capture"
+
+[[bin]]
+name = "MinkaCap"
+path = "src/main.rs"
+
+[dependencies]
+wayland-client = "0.31"
+wayland-protocols = { version = "0.32", features = ["client", "staging"] }
+rustix = { version = "0.38", features = ["fs", "mm"] }
+png = "0.17"
+
+[profile.release]
+lto = "thin"
