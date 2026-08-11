@@ -234,14 +234,12 @@ impl Dispatch<
                 );
             }
             ext_image_copy_capture_session_v1::Event::ShmFormat { 
-                format,
+                format: WEnum::Value(f),
             } => {
-                if let WEnum::Value(f) = format {
-                    state.shm_formats
-                        .push(
-                            f as u32,
-                        );
-                }
+                state.shm_formats
+                    .push(
+                        f as u32,
+                    );
             }
             ext_image_copy_capture_session_v1::Event::Done => state.session_done = true,
             ext_image_copy_capture_session_v1::Event::Stopped => state.frame_failed = true,
