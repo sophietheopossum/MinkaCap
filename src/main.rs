@@ -580,9 +580,8 @@ fn main() {
                 size,
             );
             for px in pixels
-                .chunks_exact(
-                    4,
-                ) {
+                .as_chunks::<4>()
+                .0 {
                 rgba
                     .extend_from_slice(
                         &[px[2], px[1], px[0], 0xff],
