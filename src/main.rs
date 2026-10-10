@@ -13,8 +13,10 @@
 //! raise-then-freeze workaround.
 //!
 //! Usage:
+//! ```text
 //!   MinkaCap list                          — one "app_id\ttitle" per line
 //!   MinkaCap grab <selector> <out.png>     — capture matching window to PNG
+//! ```
 //!
 //! `selector` matches a toplevel whose app_id or title equals it (exact),
 //! else whose title or app_id contains it (substring). MinkaShot passes the
