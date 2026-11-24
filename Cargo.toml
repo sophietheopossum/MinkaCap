@@ -12,6 +12,8 @@ path = "src/lib.rs"
 doctest = false
 
 [dependencies]
+# MinkaDE's log line (minka-note/, at the top of the checkout): one write(2) each.
+minka-note = { path = "../minka-note" }
 wayland-client = "0.31"
 wayland-protocols = { version = "0.32", features = ["client", "staging"] }
 rustix = { version = "0.38", features = ["fs", "mm"] }

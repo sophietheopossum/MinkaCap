@@ -295,7 +295,7 @@ fn die(
     code: i32, 
     msg: &str,
 ) -> ! {
-    eprintln!(
+    minka_note::note!(
         "MinkaCap: {msg}",
     );
     std::process::exit(
@@ -404,7 +404,7 @@ pub fn main() {
                     ),
                 );
             };
-            eprintln!(
+            minka_note::note!(
                 "MinkaCap: capturing {info}",
             );
 
@@ -628,7 +628,7 @@ pub fn main() {
                     "png data",
                 );
 
-            eprintln!(
+            minka_note::note!(
                 "MinkaCap: saved {out_path} ({width}x{height})",
             );
         }
