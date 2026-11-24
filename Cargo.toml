@@ -4,9 +4,12 @@ version = "0.1.0"
 edition = "2021"
 description = "Per-window Wayland capture for MinkaDE: occlusion-free toplevel screenshots via ext-image-copy-capture"
 
-[[bin]]
-name = "MinkaCap"
-path = "src/main.rs"
+# A library: MinkaDE's one binary (minka/, at the top of the checkout) runs it
+# under the name it was started as. Nothing is built from here alone.
+[lib]
+name = "minka_cap"
+path = "src/lib.rs"
+doctest = false
 
 [dependencies]
 wayland-client = "0.31"
